@@ -1,0 +1,174 @@
+.event-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 30, 66, 0.54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    backdrop-filter: blur(2px);
+}
+
+.event-modal-content {
+    background: white;
+    width: 600px;
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ebecf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f5f7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.event-modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #172b4d;
+}
+
+.event-modal-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5e6c84;
+}
+
+.event-modal-body {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #42526e;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #dfe1e6;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4c9aff;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.attendee-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.add-btn {
+    background: #f4f5f7;
+    border: 1px solid #dfe1e6;
+    border-radius: 4px;
+    width: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #42526e;
+}
+
+.add-btn:hover {
+    background: #ebecf0;
+}
+
+.attendee-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.attendee-tag {
+    background: #deebff;
+    color: #0052cc;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.attendee-tag button {
+    background: none;
+    border: none;
+    color: #0052cc;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ebecf0;
+    padding-top: 15px;
+}
+
+.save-btn {
+    background: #0052cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.save-btn:hover {
+    background: #0065ff;
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    color: #42526e;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.cancel-btn:hover {
+    background: #ebecf0;
+    border-radius: 4px;
+}

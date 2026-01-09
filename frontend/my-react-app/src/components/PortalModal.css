@@ -1,0 +1,111 @@
+.portal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 30, 66, 0.54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    backdrop-filter: blur(2px);
+}
+
+.portal-modal-content {
+    background: white;
+    width: 900px;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.portal-modal-header {
+    padding: 20px 24px;
+    background: #f4f5f7;
+    border-bottom: 1px solid #dfe1e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portal-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #172b4d;
+}
+
+.portal-modal-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5e6c84;
+}
+
+.portal-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.portal-section {
+    margin-bottom: 30px;
+}
+
+.portal-section h3 {
+    font-size: 1.1rem;
+    color: #42526e;
+    border-bottom: 2px solid #ebecf0;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.portal-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #172b4d;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.portal-link:hover {
+    background: #deebff;
+    border-color: #b3d4ff;
+    color: #0052cc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.portal-link.federal {
+    background: #e3f2fd;
+    border-color: #bbdefb;
+    color: #0c1c38;
+}
+
+.portal-link.federal:hover {
+    background: #bbdefb;
+    color: #0049b0;
+}
+
+.link-icon {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}

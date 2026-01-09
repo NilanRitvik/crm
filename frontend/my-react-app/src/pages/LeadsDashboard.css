@@ -1,0 +1,54 @@
+.dashboard-container {
+    width: 100%;
+    margin: 0;
+    padding: 24px 20px 0 20px;
+    /* Increased top padding */
+    /* Keep some horizontal padding but allow full width */
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.dashboard-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.view-toggle {
+    display: flex;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    color: #495057;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.toggle-btn:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.toggle-btn:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.toggle-btn.active {
+    background-color: #0052cc;
+    border-color: #0052cc;
+    color: white;
+}
+
+.toggle-btn:not(.active):hover {
+    background-color: #f8f9fa;
+}

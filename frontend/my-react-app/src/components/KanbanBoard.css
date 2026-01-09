@@ -1,0 +1,222 @@
+.kanban-container {
+    padding: 24px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6f9;
+    font-family: 'Inter', sans-serif;
+}
+
+.kanban-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.summary-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.summary-value.won {
+    color: #2e7d32;
+}
+
+.summary-value.lost {
+    color: #c62828;
+}
+
+.kanban-lanes {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout */
+    gap: 16px;
+    overflow-x: auto;
+    /* Horizontal scroll */
+    overflow-y: hidden;
+    flex: 1;
+    min-height: 0;
+    padding-bottom: 24px;
+}
+
+.kanban-column {
+    flex: 1 0 300px;
+    /* Grow to fill space, min-width 300px */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebecf0;
+    padding: 12px;
+    border-radius: 8px;
+    height: 100%;
+    /* Fill height */
+}
+
+.column-header {
+    margin-bottom: 12px;
+    padding: 0 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #172b4d;
+    text-transform: uppercase;
+}
+
+.column-count {
+    background: rgba(23, 43, 77, 0.1);
+    color: #172b4d;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.cards-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    /* Space for scrollbar */
+    min-height: 100px;
+}
+
+/* Scrollbar styling for cards container */
+.cards-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 3px;
+}
+
+.kanban-card {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(9, 30, 66, 0.25);
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: grab;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.kanban-card:hover {
+    box-shadow: 0 4px 8px rgba(9, 30, 66, 0.25);
+    background-color: #fafbfc;
+}
+
+.kanban-card.dragging {
+    opacity: 0.3;
+    background: #f4f5f7;
+    border: 1px dashed #ccc;
+    box-shadow: none;
+}
+
+.kanban-card.overlay {
+    cursor: grabbing;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) rotate(2deg);
+    opacity: 0.9;
+    z-index: 9999;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #172b4d;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.card-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: #ff9800;
+    /* Default fall back mostly overridden by JS */
+    color: white;
+    font-weight: 600;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f4f5f7;
+    font-size: 12px;
+    color: #5e6c84;
+}
+
+.meta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card-amount {
+    font-weight: 600;
+    color: #333;
+}
+
+.priority-high {
+    border-left-color: #ff5630;
+}
+
+.priority-medium {
+    border-left-color: #ffab00;
+}
+
+.priority-low {
+    border-left-color: #36b37e;
+}
+
+.add-btn {
+    background-color: #0052cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #0747a6;
+}

@@ -1,0 +1,82 @@
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.file-upload-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #42526E;
+}
+
+.file-icon-folder {
+    color: #FFC400;
+    /* Folder yellow */
+    font-size: 1.1rem;
+}
+
+.file-icon-upload {
+    color: #0052CC;
+    /* Blue upload arrow */
+    font-size: 0.9rem;
+    background: #E6EFFC;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.file-upload-control {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #DFE1E6;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-wrap: wrap;
+    /* Key for responsiveness */
+}
+
+.file-upload-control:hover {
+    border-color: #4C9AFF;
+    box-shadow: 0 0 0 2px rgba(76, 154, 255, 0.2);
+}
+
+.choose-file-btn {
+    background-color: #F4F5F7;
+    color: #172B4D;
+    border: none;
+    border-right: 1px solid #DFE1E6;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background 0.1s;
+}
+
+.file-upload-control:hover .choose-file-btn {
+    background-color: #EBECF0;
+}
+
+.file-name-display {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #5E6C84;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    min-width: 0;
+    /* Allows shrinking in flex */
+}
+
+/* Hide default file input */
+.hidden-file-input {
+    display: none;
+}

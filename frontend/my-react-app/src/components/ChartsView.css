@@ -1,0 +1,77 @@
+.charts-container {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-title {
+    color: #172b4d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+.chart-wrapper {
+    width: 100%;
+    min-height: 350px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Card-like look for wrappers */
+.chart-wrapper.card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.charts-empty {
+    text-align: center;
+    padding: 40px;
+    color: #6b778c;
+    font-size: 1.1rem;
+}
+
+.metrics-summary {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* responsive wrap */
+}
+
+.metric-card {
+    background: #f4f5f7;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+    flex: 1;
+}
+
+.metric-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    color: #5e6c84;
+    text-transform: uppercase;
+}
+
+.metric-card p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #091e42;
+}

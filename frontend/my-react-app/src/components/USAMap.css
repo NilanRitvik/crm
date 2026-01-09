@@ -1,0 +1,93 @@
+.usa-grid-map {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 40px;
+    height: 85vh;
+    /* Occupy vertical space */
+}
+
+.state-box {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom-width: 4px;
+    /* thick bottom border */
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    padding: 8px 4px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.state-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.state-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.state-id {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #253858;
+    margin-bottom: 4px;
+}
+
+.state-name {
+    font-size: 0.75rem;
+    color: #5E6C84;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    width: 100%;
+    /* Allow wrapping for long names like Rhode Island */
+    white-space: normal;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1200px) {
+    .usa-grid-map {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .state-id {
+        font-size: 1rem;
+    }
+
+    .state-name {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .state-name {
+        display: none;
+    }
+
+    .state-id {
+        font-size: 0.9rem;
+    }
+
+    .usa-grid-map {
+        gap: 4px;
+    }
+}
